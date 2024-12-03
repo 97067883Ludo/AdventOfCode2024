@@ -10,9 +10,7 @@ public class adventOfCodeDay1
     
     public static void Main(string[] args)
     {
-        var test = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
-        
-        FileStream fs = new FileStream(Path.Combine(test, "opdracht"), FileMode.Open);
+        FileStream fs = new FileStream(Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), "opdracht"), FileMode.Open);
 
         using (StreamReader sr = new StreamReader(fs))
         {
